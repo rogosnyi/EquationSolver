@@ -36,10 +36,12 @@ function parceConsole() {
     a = Number(userInput);
     if (isNaN(a)) {
       console.log("Input error. Value must me a number");
+    } else if (a === 0) {
+      console.log("Input error. A cannot be 0");
     } else {
       result.push(a);
     }
-  } while (isNaN(a));
+  } while (isNaN(a) || a === 0);
 
   do {
     userInput = readline.question("Enter b: ");
@@ -68,6 +70,10 @@ function equationSolve(coef) {
   const a = coef[0];
   const b = coef[1];
   const c = coef[2];
+  if (a === 0)
+    return console.log(
+      "Error, A cannot be 0\nPlease, change first coefficient in your file"
+    );
   const discriminant = b * b - 4 * a * c;
   if (discriminant < 0) return console.log("There are 0 equation roots");
   if (discriminant > 0) {
