@@ -30,3 +30,6 @@ To start non interactive file type node commant in your terminal
 node equation.js *path/to/file.txt*
 ```
 *If file is in the same folder with .js application, you should write only fileName.txt instead of full path*
+
+## Revert commit
+- [Link](https://github.com/rogosnyi/EquationSolver/commit/eb7542a3c964b7d2273e5a0dcbe9e31d51c35217)
